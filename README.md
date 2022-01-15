@@ -8,20 +8,20 @@ Fork를 통해서 개인 레포지토리에서 작업을 할 겁니다.
 
 1. VSCode 에디터(Atom, PyCharm, 등 개인에게 맞는 에디터 사용해도 됩니다)
 
-![vscode](./img/vscode-install.png)
+![vscode](./readme_img/vscode-install.png)
 
 2. Github Desktop (git 사용 방법 아는 분이면 안해도 됨)
 
-![github desktop](./img/github-desktop-install.png)
+![github desktop](./readme_img/github-desktop-install.png)
 
 3. Python 3.8
    1. Windows를 사용하는 분이면 Microsoft Store에서 설치하는 걸 권장드립니다
 
-![ms store 1](./img/ms-store.png)
+![ms store 1](./readme_img/ms-store.png)
 
-![ms store 2](./img/ms-store-search.png)
+![ms store 2](./readme_img/ms-store-search.png)
 
-![ms store 3](./img/ms-store-python38.png)
+![ms store 3](./readme_img/ms-store-python38.png)
 
 ## 봇 실행 방법
 
@@ -31,21 +31,21 @@ Fork를 통해서 개인 레포지토리에서 작업을 할 겁니다.
 
 익스플로러, 빈 공간을 우클릭 하면 경로를 복사할 수 있습니다.
 
-![get path](./img/path-1.png)
+![get path](./readme_img/path-1.png)
 
 `윈도우 키 + R` 을 눌러서 실행을 띄워서 `cmd`를 입력하고 엔터를 눌러 터미널을 실행합니다.
 
-![open cmd](./img/cmd.png)
+![open cmd](./readme_img/cmd.png)
 
 그리고 `cd (복사한 경로)`를 적고 엔터를 누릅니다.
 
-![go to directory](./img/go-to-dir.png)
+![go to directory](./readme_img/go-to-dir.png)
 
 ### 이동하는 방법 2
 
 또는 ``Shift + `(backtick, 백 틱)``을 치면 VSCode에 내장된 터미널을 사용할 수 있습니다.
 
-![vscode terminal](./img/vscode-terminal.png)
+![vscode terminal](./readme_img/vscode-terminal.png)
 
 -----
 
@@ -83,11 +83,11 @@ python main.py
 
 다음과 같이 실행되는 것을 볼 수 있고,
 
-![run sample bot](./img/run-sample.png)
+![run sample bot](./readme_img/run-sample.png)
 
 디스코드 상에서 로그인 되어 있는 것을 확인할 수 있습니다.
 
-![check loggined bot](./img/bot-logged-in.png)
+![check loggined bot](./readme_img/bot-logged-in.png)
 
 ## 개발 시작
 
