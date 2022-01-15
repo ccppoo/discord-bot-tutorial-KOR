@@ -5,15 +5,16 @@ import discord
 import asyncio
 from discord.message import Message
 from discord.ext import commands
+from discord.ext.commands.context import Context
 from discord.ui import Button, View
 from typing import List
-
-from discord.webhook import async_
 from my_secrets import TOKEN
 
 # 코드가 너무 길어지면 스크립트를 따로 만들어서 import 할 수 있습니다.
 from library import 도서관
 
+# slash command import
+from slash_commands.library import library_command
 
 description = """Discord Bot 샘플 봇입니다"""
 
@@ -22,14 +23,15 @@ intents.members = True
 
 bot = commands.Bot(command_prefix="!", description=description, intents=intents)
 
+
 # library.py 에서 import 한 명령어
 bot.add_command(도서관)
+bot.add_application_command(library_command)
 
 @bot.event
 async def on_ready():
     print(f"로그인 성공! 닉네임: {bot.user} 아이디(ID): {bot.user.id}")
-    print("------")    
-
+    print("------")
 
 @bot.event
 async def on_message(message : Message):
@@ -57,7 +59,7 @@ async def on_message(message : Message):
 
 
 @bot.command(description="안녕!")
-async def hello(ctx):
+async def hello(ctx : Context):
     button = Button(label="Click me!", style=discord.ButtonStyle.green, emoji="😂")
     view = View()
     view.add_item(button)
@@ -65,7 +67,7 @@ async def hello(ctx):
 
 
 @bot.command(description="랜덤으로 골라주기 사용법: !랜덤 하나 둘 셋")
-async def 랜덤(ctx, *choices: List[str]):
+async def 랜덤(ctx : Context, *choices: List[str]):
     """
         choices : List[str]
             사용자가 보낸 명령어를 제외한 메세지
@@ -75,7 +77,7 @@ async def 랜덤(ctx, *choices: List[str]):
     await ctx.send(random.choice(choices))
 
 @bot.command(description="주어진 초 이후에 알람을 보내드립니다!")
-async def 알람(ctx, seconds : str = None):
+async def 알람(ctx : Context, seconds : str = None):
     """
         seconds : int
             주어진 자연수 만큼 대기 이후 @mention을 통해 알림을 보냅니다.
@@ -95,7 +97,7 @@ async def 알람(ctx, seconds : str = None):
         await ctx.send(f"이건 자연수가 아니자나! {seconds} ")
 
 @bot.command()
-async def joined(ctx, member: discord.Member):
+async def joined(ctx : Context, member: discord.Member):
     """Says when a member joined."""
     await ctx.send(f"{member.name} joined in {member.joined_at}")
 
