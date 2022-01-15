@@ -89,6 +89,36 @@ python main.py
 
 ![check loggined bot](./readme_img/bot-logged-in.png)
 
+## slash_command 예시 따라하기, 채팅 서버(길드) ID 찾는 방법
+
+**slash command**는 **application command**라는 이름으로도 불리니 혼동이 없으시길 바랍니다.
+
+여러분이 봇을 테스트 하는 채팅 서버(길드)에 들어가서
+
+채널 리스트가 있는 부분 위에 우클릭을 합니다.
+
+![how to get server id 1](./readme_img/get_server_id_1.png)
+
+그 다음 서버 설정의 **위젯**으로 들어가 서버 아이디를 복사합니다.
+
+![how to get server id 2](./readme_img/get_server_id_2.png)
+
+그리고 `slash_commands` 디렉토리의 `library.py`를 보시면
+
+한글로 `여러분의 테스트 서버 아이디`를 지우고 길드 ID를 붙여 넣습니다.
+
+![how to get server id 3](./readme_img/get_server_id_3.png)
+
+`guild_id`는 원칙상 비어 있어도 되지만, 그렇게 할 경우 디스코드에
+
+슬래시 커맨드(slash command) 자동완성이 업데이트 되기까지 시간이 오래 걸릴 수 있으므로
+
+해당 서버에서만 적용이 되도록 설정을 하는 겁니다.
+
+새롭게 서버(길드) ID를 복붙하고 저장하고 실행하면 다음과 같은 모습을 볼 수 있습니다.
+
+![slash command example](./readme_img/slash_command_example.png)
+
 ## 개발 시작
 
 디스코드 API 문서와 py-cord의 문서를 읽으면서 기능을 추가하세요!
