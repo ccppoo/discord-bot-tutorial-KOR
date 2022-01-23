@@ -59,20 +59,21 @@ async def operating_hours(ctx : ApplicationContext):
 )
 async def library_command(
     ctx : ApplicationContext,
-    알고_싶은_것: Option(str,
+    선택: Option(str,
                     "Choose your gender", 
                     choices=["시설", "운영시간", "사진"], 
                     required=True)
 ):
-    print(알고_싶은_것)
+    print(f"{ctx=}")
+    print(f"{선택=}")
     
-    if 알고_싶은_것 == "시설":
+    if 선택 == "시설":
         await facilities(ctx)
         
-    if 알고_싶은_것 =="운영시간":
+    if 선택 =="운영시간":
         await operating_hours(ctx)
         
-    if 알고_싶은_것 == "사진":
+    if 선택 == "사진":
         await images(ctx)
     
     return
